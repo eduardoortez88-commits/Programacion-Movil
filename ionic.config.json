@@ -1,0 +1,7 @@
+{
+  "name": "Directorio_de_mascotas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

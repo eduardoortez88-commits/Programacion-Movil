@@ -1,0 +1,23 @@
+:host {
+  --verde: #244d3c;
+  --verde-oscuro: #183b2d;
+  --crema: #fbf8f1;
+  --coral: #e98a65;
+  --texto-suave: #78857d;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.toolbar-mascotas {
+  --background: var(--crema);
+  --color: var(--verde-oscuro);
+}
+
+ion-title {
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--verde-oscuro);
+}
+
+.editar-content {
+  --background: var(--crema);
+}

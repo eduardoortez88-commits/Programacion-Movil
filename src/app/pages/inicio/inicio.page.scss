@@ -1,0 +1,253 @@
+:host {
+  --verde: #244d3c;
+  --verde-oscuro: #183b2d;
+  --crema: #fbf8f1;
+  --coral: #e98a65;
+}
+
+ion-content.inicio-content {
+  --background: var(--crema);
+}
+
+.toolbar-mascotas {
+  --background: var(--crema);
+  --color: var(--verde-oscuro);
+}
+
+ion-title {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.bienvenida-card {
+  margin: 8px 0 25px;
+  border-radius: 22px;
+  background: var(--verde);
+  color: #ffffff;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.bienvenida-card ion-card-content {
+  padding: 24px 20px;
+  position: relative;
+}
+
+.texto-pequeno {
+  color: #8b9a8e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin: 0 0 7px;
+}
+
+.bienvenida-card .texto-pequeno {
+  color: #c5d7c9;
+}
+
+.bienvenida-card h1 {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 8px 0;
+}
+
+.bienvenida-card h1 span {
+  color: #f3b18e;
+}
+
+.descripcion-bienvenida {
+  color: #e0e9e2;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 245px;
+  margin-bottom: 18px;
+}
+
+.boton-explorar {
+  --background: var(--coral);
+  --background-activated: #d87955;
+  --color: #ffffff;
+  --border-radius: 12px;
+  font-weight: 700;
+  text-transform: none;
+  position: relative;
+  z-index: 1;
+}
+
+.huella-decoracion {
+  position: absolute;
+  right: -12px;
+  bottom: 10px;
+  font-size: 105px;
+  color: rgba(255, 255, 255, 0.10);
+  transform: rotate(-18deg);
+}
+
+.titulo-seccion {
+  margin: 0 0 12px;
+}
+
+.titulo-seccion h2 {
+  color: var(--verde-oscuro);
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  align-items: stretch;
+}
+
+.categoria-card {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  margin: 0;
+  border-radius: 15px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(36, 77, 60, 0.06);
+  display: flex;
+  align-items: stretch;
+}
+
+.categoria-card ion-card-content {
+  width: 100%;
+  min-height: 112px;
+  padding: 14px 4px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-categoria {
+  color: var(--verde);
+  font-size: 27px;
+  margin-bottom: 7px;
+}
+
+.categoria-card h3 {
+  color: var(--verde-oscuro);
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.categoria-card p {
+  color: #89958c;
+  font-size: 9px;
+  margin: 0;
+}
+
+.destacados-titulo {
+  margin-top: 20px;
+}
+
+.destacado-card {
+  display: flex;
+  align-items: center;
+  margin: 0 0 12px;
+  padding: 10px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(36, 77, 60, 0.06);
+}
+
+.foto-destacado {
+  width: 90px;
+  height: 88px;
+  min-width: 90px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.foto-destacado ion-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destacado-card ion-card-content {
+  padding: 4px 0 4px 12px;
+}
+
+.categoria-destacada {
+  color: #d47b58;
+  font-size: 10px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.destacado-card h3 {
+  color: var(--verde-oscuro);
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+
+.direccion-destacada {
+  color: #75847a;
+  font-size: 10px;
+  margin: 0 0 4px;
+}
+
+.direccion-destacada ion-icon,
+.telefono-destacado ion-icon {
+  vertical-align: middle;
+  color: #78927d;
+  margin-right: 3px;
+}
+
+.telefono-destacado {
+  color: #75847a;
+  font-size: 10px;
+  margin: 0;
+}
+
+.boton-ver-todos {
+  --color: var(--verde);
+  --border-color: #9bb5a1;
+  --border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: none;
+  margin: 8px 0 20px;
+}
+
+.categoria-card h3 {
+  white-space: nowrap;
+  font-size: clamp(10px, 2.8vw, 12px);
+}
+
+.categoria-card p {
+  line-height: 1.3;
+  min-height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 360px) {
+  .categorias-grid {
+    gap: 6px;
+  }
+
+  .categoria-card ion-card-content {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .categoria-card h3 {
+    font-size: 10px;
+  }
+
+  .categoria-card p {
+    font-size: 8px;
+  }
+}

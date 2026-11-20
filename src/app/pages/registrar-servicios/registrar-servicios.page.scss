@@ -1,0 +1,162 @@
+:host {
+  --verde: #244d3c;
+  --verde-oscuro: #183b2d;
+  --crema: #fbf8f1;
+  --coral: #e98a65;
+  --texto-suave: #78857d;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.toolbar-mascotas {
+  --background: var(--crema);
+  --color: var(--verde-oscuro);
+}
+
+ion-title {
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--verde-oscuro);
+}
+
+.registro-content { --background: var(--crema); }
+
+.registro-intro {
+  margin: 9px 17px 23px;
+  padding: 23px 21px;
+  border-radius: 21px;
+  background: var(--verde);
+  color: #fff;
+}
+
+.registro-eyebrow {
+  color: #c5d7c9;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin: 0 0 9px;
+}
+
+.registro-intro h1 {
+  color: #fff;
+  font: 900 26px/1.12 'Nunito', sans-serif;
+  margin: 0;
+}
+
+.registro-intro h1 span { color: #f3b18e; }
+
+.registro-intro > p:last-child {
+  color: #d9e5dc;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 10px 0 0;
+  max-width: 280px;
+}
+
+.formulario-seccion { padding: 0 17px 28px; }
+
+.seccion-titulo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 0 0 13px;
+}
+
+.numero-seccion {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 11px;
+  background: #e7efe8;
+  color: var(--verde);
+  font: 900 12px 'Nunito', sans-serif;
+}
+
+.seccion-titulo h2 {
+  color: var(--verde-oscuro);
+  font: 900 17px 'Nunito', sans-serif;
+  margin: 0 0 2px;
+}
+
+.seccion-titulo p {
+  color: var(--texto-suave);
+  font-size: 11px;
+  margin: 0;
+}
+
+.campo-formulario {
+  --background: #fff;
+  --border-radius: 12px;
+  --padding-start: 13px;
+  --inner-padding-end: 13px;
+  --min-height: 59px;
+  margin: 0 0 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 13px rgba(36,77,60,.045);
+}
+
+.campo-formulario ion-label {
+  color: #718076 !important;
+  font-size: 12px;
+}
+
+.campo-formulario ion-input,
+.campo-formulario ion-select,
+.campo-formulario ion-textarea {
+  color: var(--verde-oscuro);
+  font-size: 13px;
+  --placeholder-color: #a4aea6;
+  --placeholder-opacity: 1;
+}
+
+.campo-descripcion { --min-height: 112px; }
+.campo-descripcion ion-textarea { min-height: 76px; }
+.datos-contacto { margin-top: 25px; }
+.foto-titulo { margin-top: 25px; }
+
+.foto-placeholder {
+  padding: 23px 16px;
+  margin: 0 0 17px;
+  border: 1.5px dashed #b8c9bb;
+  border-radius: 15px;
+  background: rgba(231,239,232,.55);
+  text-align: center;
+}
+
+.foto-placeholder ion-icon {
+  color: #73917b;
+  font-size: 32px;
+}
+
+.foto-placeholder h3 {
+  color: var(--verde-oscuro);
+  font: 800 14px 'Nunito', sans-serif;
+  margin: 8px 0 4px;
+}
+
+.foto-placeholder p {
+  color: var(--texto-suave);
+  font-size: 10px;
+  line-height: 1.45;
+  margin: 0 auto;
+  max-width: 230px;
+}
+
+.boton-registrar {
+  --background: var(--verde);
+  --background-activated: var(--verde-oscuro);
+  --border-radius: 12px;
+  --color: #fff;
+  height: 48px;
+  font-weight: 800;
+  text-transform: none;
+  margin: 0;
+}
+
+.nota-formulario {
+  color: #929d94;
+  font-size: 10px;
+  text-align: center;
+  margin: 10px 0 0;
+}

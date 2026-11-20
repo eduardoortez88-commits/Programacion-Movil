@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar class="toolbar-mascotas">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Directorio de Mascotas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="inicio-content ion-padding">
+
+  <ion-card class="bienvenida-card">
+    <ion-card-content>
+      <p class="texto-pequeno">CUIDADO • BIENESTAR • AMOR</p>
+      <h1>Un mundo mejor<br>para sus <span>huellitas.</span></h1>
+      <p class="descripcion-bienvenida">
+        Encuentra veterinarias, tiendas y servicios para cuidar a quienes más quieres.
+      </p>
+      <ion-button routerLink="/servicios" class="boton-explorar">
+        Explorar servicios
+        <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      </ion-button>
+      <ion-icon name="paw" class="huella-decoracion"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="titulo-seccion">
+    <div>
+      <p class="texto-pequeno">ENCUENTRA LO QUE NECESITAS</p>
+      <h2>Categorías</h2>
+    </div>
+  </div>
+
+  <div class="categorias-grid"><ion-card class="categoria-card" routerLink="/servicios">
+      <ion-card-content>
+        <ion-icon name="medkit-outline" class="icono-categoria"></ion-icon>
+        <h3>Veterinarias</h3>
+        <p>Salud y consultas</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="categoria-card" routerLink="/servicios">
+      <ion-card-content>
+        <ion-icon name="cut-outline" class="icono-categoria"></ion-icon>
+        <h3>Estética</h3>
+        <p>Baño y peluquería</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="categoria-card" routerLink="/servicios">
+      <ion-card-content>
+        <ion-icon name="storefront-outline" class="icono-categoria"></ion-icon>
+        <h3>Tiendas</h3>
+        <p>Alimentos y accesorios</p>
+      </ion-card-content>
+    </ion-card>
+
+  </div><div class="titulo-seccion destacados-titulo">
+    <div>
+      <p class="texto-pequeno">LUGARES PARA CONOCER</p>
+      <h2>Establecimientos destacados</h2>
+    </div>
+  </div>
+
+  <ion-card class="destacado-card" *ngFor="let servicio of destacados" [routerLink]="['/detalles']">
+    <ion-thumbnail class="foto-destacado">
+      <ion-img [src]="servicio.foto"></ion-img>
+    </ion-thumbnail>
+    <ion-card-content>
+      <p class="categoria-destacada">{{ servicio.categoria }}</p>
+      <h3>{{ servicio.nombre }}</h3>
+      <p class="direccion-destacada">
+        <ion-icon name="location-outline"></ion-icon>
+        {{ servicio.direccion }}
+      </p>
+      <p class="telefono-destacado">
+        <ion-icon name="call-outline"></ion-icon>
+        {{ servicio.telefono }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" fill="outline" routerLink="/servicios" class="boton-ver-todos">
+    Ver todos los establecimientos
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay" class="menu-mascotas">
+      <ion-content>
+        <div class="menu-contenido">
+          <div class="menu-marca">
+            <div class="marca-icono">
+              <ion-icon name="paw"></ion-icon>
+            </div>
+            <div class="marca-texto">
+              <span class="marca-superior">DIRECTORIO</span>
+              <h2>Huellitas</h2>
+              <p>Todo para el bienestar de tu mascota</p>
+            </div>
+          </div>
+
+          <div class="menu-separador"></div>
+          <p class="menu-etiqueta">NAVEGACIÓN</p>
+
+          <ion-list class="lista-navegacion">
+            @for (p of appPages; track p.url) {
+              <ion-menu-toggle auto-hide="false">
+                <ion-item
+                  [routerLink]="['/' + p.url]"
+                  routerDirection="root"
+                  lines="none"
+                  detail="false"
+                  routerLinkActive="selected"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  class="elemento-menu">
+                  <div class="icono-menu" slot="start">
+                    <ion-icon [name]="p.icon"></ion-icon>
+                  </div>
+                  <ion-label>{{ p.title }}</ion-label>
+                  <ion-icon name="chevron-forward-outline" slot="end" class="flecha-menu"></ion-icon>
+                </ion-item>
+              </ion-menu-toggle>
+            }
+          </ion-list>
+
+          <div class="menu-pie">
+            <div class="pie-huella">
+              <ion-icon name="heart"></ion-icon>
+            </div>
+            <div>
+              <strong>Amor por sus huellitas</strong>
+              <span>Encuentra lo que necesitan</span>
+            </div>
+          </div>
+        </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

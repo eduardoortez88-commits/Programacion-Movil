@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar class="toolbar-mascotas">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registrar un servicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="registro-content">
+  <section class="registro-intro">
+    <p class="registro-eyebrow">COMPARTE TU SERVICIO</p>
+    <h1>Ayúdanos a cuidar<br><span>de sus patitas.</span></h1>
+    <p>Completa los datos para presentar tu negocio o servicio para mascotas.</p>
+  </section>
+
+  <section class="formulario-seccion">
+    <div class="seccion-titulo">
+      <span class="numero-seccion">01</span>
+      <div><h2>Información general</h2><p>Cuéntanos sobre tu establecimiento.</p></div>
+    </div>
+
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label position="floating">Nombre del servicio</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre" placeholder="Ej. Veterinaria Huellitas"></ion-input>
+    </ion-item>
+
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label position="floating">Categoría</ion-label>
+      <ion-select interface="popover" [(ngModel)]="categoria" placeholder="Selecciona una categoría">
+        <ion-select-option value="Veterinaria">Veterinaria</ion-select-option>
+        <ion-select-option value="Estética y peluquería">Estética y peluquería</ion-select-option>
+        <ion-select-option value="Tienda de mascotas">Tienda de mascotas</ion-select-option>
+        <ion-select-option value="Alojamiento y guardería">Alojamiento y guardería</ion-select-option>
+        <ion-select-option value="Adiestramiento">Adiestramiento</ion-select-option>
+        <ion-select-option value="Refugio animal">Refugio animal</ion-select-option>
+        <ion-select-option value="Otro servicio">Otro servicio</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="campo-formulario campo-descripcion" lines="none">
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea rows="4" [(ngModel)]="descripcion" placeholder="Describe brevemente los servicios que ofreces..."></ion-textarea>
+    </ion-item>
+
+    <div class="seccion-titulo datos-contacto">
+      <span class="numero-seccion">02</span>
+      <div><h2>Ubicación y contacto</h2><p>¿Dónde pueden encontrarte?</p></div>
+    </div>
+
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input type="text" [(ngModel)]="direccion" placeholder="Colonia, barrio o referencia"></ion-input>
+    </ion-item>
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label position="floating">Número de teléfono</ion-label>
+      <ion-input type="tel" [(ngModel)]="telefono" placeholder="Ej. 9999-9999"></ion-input>
+    </ion-item>
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label position="floating">Horario de atención</ion-label>
+      <ion-input type="text" [(ngModel)]="horario" placeholder="Ej. Lunes a sábado, 8:00 a.m. - 5:00 p.m."></ion-input>
+    </ion-item>
+
+    <div class="seccion-titulo datos-contacto">
+      <span class="numero-seccion">03</span>
+      <div><h2>Coordenadas del establecimiento</h2><p>Obtén la ubicación GPS desde el dispositivo.</p></div>
+    </div>
+
+    <ion-button expand="block" fill="outline" class="boton-ubicacion" (click)="obtenerUbicacion()">
+      <ion-icon slot="start" name="locate-outline"></ion-icon>
+      Obtener coordenadas
+    </ion-button>
+
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label position="floating">Latitud</ion-label>
+      <ion-input type="number" [value]="latitud" readonly="true" placeholder="Presiona Obtener coordenadas"></ion-input>
+    </ion-item>
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label position="floating">Longitud</ion-label>
+      <ion-input type="number" [value]="longitud" readonly="true" placeholder="Presiona Obtener coordenadas"></ion-input>
+    </ion-item>
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label position="floating">Precisión (metros)</ion-label>
+      <ion-input type="number" [value]="precision" readonly="true" placeholder="Precisión del GPS"></ion-input>
+    </ion-item>
+
+    <div class="seccion-titulo foto-titulo">
+      <span class="numero-seccion">04</span>
+      <div><h2>Fotografía y otros datos</h2></div>
+    </div>
+    <div class="foto-placeholder">
+      <ion-icon name="image-outline"></ion-icon>
+      <h3>Fotografía del establecimiento</h3>
+      <p>La captura o selección de imágenes se habilitará cuando trabajemos esa función.</p>
+    </div>
+
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label position="floating">Fecha de registro</ion-label>
+      <ion-input type="date" [(ngModel)]="fecha"></ion-input>
+    </ion-item>
+    <ion-item class="campo-formulario" lines="none">
+      <ion-label>Recomendado</ion-label>
+      <ion-toggle slot="end" [(ngModel)]="recomendado"></ion-toggle>
+    </ion-item>
+
+    <ion-button expand="block" class="boton-registrar">
+      <ion-icon slot="start" name="paw-outline"></ion-icon>
+      Registrar servicio
+    </ion-button>
+  </section>
+</ion-content>

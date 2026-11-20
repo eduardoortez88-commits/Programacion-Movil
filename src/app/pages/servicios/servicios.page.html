@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar class="toolbar-mascotas">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Servicios para ellos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="services-content">
+  <section class="intro">
+    <div class="intro-copy">
+      <p class="eyebrow">CUIDADO • BIENESTAR • AMOR</p>
+      <h1>Todo para tu<br><span>mejor amigo.</span></h1>
+      <p class="intro-text">Encuentra lugares y servicios que cuidan de tus mascotas.</p>
+    </div>
+    <div class="paw-decoration" aria-hidden="true">
+      <ion-icon name="paw"></ion-icon>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <ion-searchbar
+      placeholder="Buscar por nombre o categoría"
+      [(ngModel)]="textoBuscar"
+      animated="true"
+      class="pet-search">
+    </ion-searchbar>
+    <div class="results-heading">
+      <div>
+        <p class="eyebrow">EXPLORA CERCA DE TI</p>
+        <h2>Servicios disponibles</h2>
+      </div>
+      <span class="result-count">{{ serviciosFiltrados.length }} lugares</span>
+    </div>
+  </section>
+
+  <section class="services-list">
+    <ion-card class="service-card" *ngFor="let servicio of serviciosFiltrados" [routerLink]="['/detalles']">
+      <div class="photo-wrap">
+        <ion-img [src]="servicio.foto" [alt]="servicio.nombre"></ion-img>
+        <span class="category-tag">{{ servicio.categoria }}</span>
+        <span class="recommended-tag" *ngIf="servicio.recomendado">
+          <ion-icon name="heart"></ion-icon> Recomendado
+        </span>
+      </div>
+
+      <ion-card-content>
+        <div class="card-title-row">
+          <h3>{{ servicio.nombre }}</h3>
+          <ion-icon name="paw" class="title-paw"></ion-icon>
+        </div>
+
+        <div class="detail-line">
+          <ion-icon name="location-outline"></ion-icon>
+          <span>{{ servicio.direccion }}</span>
+        </div>
+        <div class="detail-line">
+          <ion-icon name="call-outline"></ion-icon>
+          <span>{{ servicio.telefono }}</span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="empty-state" *ngIf="serviciosFiltrados.length === 0">
+      <ion-icon name="search-outline"></ion-icon>
+      <h3>No encontramos resultados</h3>
+      <p>Prueba con otro nombre o categoría.</p>
+    </div>
+  </section>
+</ion-content>
